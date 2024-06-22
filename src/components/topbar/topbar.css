@@ -1,0 +1,326 @@
+
+/* topbar.css */
+
+.topbarContainer {
+  width: 100%;
+  height: 50px;
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.topbarLeft {
+  flex: 3;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.topbarCenter {
+  flex: 4;
+  position: relative;
+}
+
+.searchbar {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchbar:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.searchIcon {
+  font-size: 20px;
+  color: gray;
+}
+
+.searchInput {
+  border: none;
+  width: 80%;
+  margin-left: 10px;
+  outline: none;
+  color: black;
+}
+
+.lab-ul {
+  list-style: none;
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.lab-ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.lab-ul li:hover {
+  background-color: #f1f1f1;
+}
+
+.topbarImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.topbarImg:hover {
+  transform: scale(1.5);
+}
+
+.username {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.topbarRight {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.topbarLinks {
+  display: flex;
+}
+
+.topbarLink {
+  margin-right: 10px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.topbarLink:hover {
+  color: #f1f1f1;
+}
+
+.topbarIcons {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.topbarIconItem {
+  margin-right: 15px;
+  position: relative;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.topbarIconItem:hover {
+  transform: scale(1.5);
+}
+
+.topbarIconBadge {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.logoutButton {
+  background-color: #333;
+  border: none;
+  height: 45px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.logoutButton:hover {
+  background-color: #f1f1f1;
+  color: #333;
+  transform: scale(1.2);
+}
+
+/* newly added */
+
+.topbarCenter {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchbar {
+  width: 100%;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.searchbar:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.searchIcon {
+  font-size: 20px;
+  color: gray;
+  transition: color 0.3s ease-in-out;
+}
+
+.searchIcon:hover {
+  color: #1877f2;
+}
+
+.searchInput {
+  width: 90%;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+  color: #333;
+  background-color: #f1f1f1;
+}
+
+.searchInput:focus {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(24, 119, 242, 0.5);
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+  transition: color 0.3s ease-in-out;
+}
+
+.searchInput:focus::placeholder {
+  color: #1877f2;
+}
+
+.searchInput:hover {
+  background-color: #e8f0fe;
+}
+
+@keyframes expandInput {
+  from {
+    width: 90%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes shrinkInput {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+.searchInput:hover {
+  animation: expandInput 0.3s forwards;
+}
+
+.searchInput:not(:hover) {
+  animation: shrinkInput 0.3s forwards;
+}
+
+.lab-ul {
+  list-style: none;
+  position: absolute;
+  top: 45px;
+  width: 70%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.lab-ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.lab-ul li:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.1);
+}
+
+.topbarImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.topbarImg:hover {
+  transform: scale(1.3);
+}
+
+.username {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
